@@ -42,6 +42,8 @@ class MainActivity : ComponentActivity() {
               Button(
                   onClick = { navigateToSecondActivity() },
                   modifier = Modifier.padding(top = 16.dp)
+
+                  
               ) {
                   Text("Demo Project")
               }

@@ -12,6 +12,8 @@ class ReadMore {
      * Mvvm pattern & Network Class
      *
      *
+     *
+     *
     1. Architecture & Design Patterns
     MVVM (Model-View-ViewModel) vs. MVP (Model-View-Presenter):
     What are the key differences between MVVM and MVP? How do you implement them in Android?
