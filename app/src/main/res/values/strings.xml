@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JetpackCustomer</string>
+    <string name="title_activity_login_page">LoginPage</string>
+    <string name="title_activity_sign_upactivity">SignUPActivity</string>
+    <string name="title_activity_otp_actvitiy">OtpActvitiy</string>
+    <string name="title_activity_commom_view">CommomVIew</string>
+</resources>
