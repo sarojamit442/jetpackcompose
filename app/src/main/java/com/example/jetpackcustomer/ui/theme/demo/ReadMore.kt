@@ -293,6 +293,12 @@ class ReadMore {
     Discuss how to create a form using EditText fields, implement validation logic in the ViewModel, and observe the result using LiveData.
 
     *******************************************************************************************
+     *
+     Topic :
+
+     how to use map current location :
+     there are two type of  use in Android
+     1
 
      */
 }
