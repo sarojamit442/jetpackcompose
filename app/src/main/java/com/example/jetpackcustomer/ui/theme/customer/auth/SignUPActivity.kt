@@ -74,14 +74,17 @@ class SignUPActivity : ComponentActivity() {
             }
             Box(modifier = Modifier
                 .fillMaxSize()
-                .padding(bottom = 20.dp).clickable { otpActvity() }
+                .padding(bottom = 20.dp)
+                .clickable { otpActvity() }
                 .align(Alignment.BottomStart), contentAlignment = Alignment.BottomStart) {
                 CommomVIew().Greeting2(name = "ssssssss")// import point to add
             }
             Column {
-                Column(modifier = Modifier
-                    .padding(start = 10.dp, end = 10.dp, top = 80.dp, bottom = 100.dp)
-                    .verticalScroll(scrollState)) {
+                Column(
+                    modifier = Modifier
+                        .padding(start = 10.dp, end = 10.dp, top = 80.dp, bottom = 100.dp)
+                        .verticalScroll(scrollState)
+                ) {
                     Column(modifier = Modifier.padding(top = 20.dp)) {
                         Row() {
                             Text(text = "UserName", fontWeight = FontWeight.Bold)
@@ -316,10 +319,6 @@ class SignUPActivity : ComponentActivity() {
 
                         }
                     }
-
-
-
-
 
 
                 }

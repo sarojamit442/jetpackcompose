@@ -2,7 +2,17 @@ package com.example.jetpackcustomer.ui.theme.demo
 
 class ReadMore {
     /**
-    What is jetpack compose and How to difference in android studio
+     what is jetpack compose
+     * Android native ui toolkit written by kotlin
+      * it is not a framework , it is jetpack library
+      * difference between library and framework
+      * difference between imperative and declarative
+      * view class use inheritance  but jetpack compose use of composition
+      * composition over inheritance
+      * whenever your state change ,it will  recreate ui
+      *
+      *
+      * What is jetpack compose and How to difference in android studio
     Jetpack a library
      * use of graphic layer in side have of modefier use border in advance version
 

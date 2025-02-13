@@ -58,7 +58,9 @@ class LoginPage : ComponentActivity() {
 
                 Column(
                     modifier = Modifier
-                        .fillMaxWidth().padding(10.dp).heightIn(6.dp)
+                        .fillMaxWidth()
+                        .padding(10.dp)
+                        .heightIn(6.dp)
                 ) {
                     Text(text = "UserName")
                     Card(
@@ -69,7 +71,6 @@ class LoginPage : ComponentActivity() {
                         TextField(value = "namem", onValueChange = {})
 
                     }
-
 
 
                 }
