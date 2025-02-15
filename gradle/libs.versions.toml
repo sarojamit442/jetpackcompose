@@ -8,6 +8,21 @@ espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.5"
 activityCompose = "1.9.3"
 composeBom = "2024.04.01"
+# hill version
+hiltViewModel = "1.0.0"
+hiltRunCopiler = "2.45"
+
+coroutines = "1.7.3"
+retrofit = "2.9.0"
+okhttp = "4.11.0"
+lifecycle = "2.8.7"
+sdp = "1.1.0"
+splashscreen = "1.0.1"
+messaging = "24.1.0"
+gms = "4.4.2"
+pinview = "1.4.4"
+shimmer = "0.5.0"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,8 +39,26 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+# hilt dependecy
+hilt-lifecycle-viewmodel = { group = "androidx.hilt", name = "hilt-lifecycle-viewmodel", version.ref = "hiltViewModel" }
+hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltViewModel" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltRunCopiler" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hiltRunCopiler" }
+
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+sdp-android = { group = "com.intuit.sdp", name = "sdp-android", version.ref = "sdp" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "messaging" }
+pinview = { group = "io.github.chaosleung", name = "pinview", version.ref = "pinview" }
+shimmer = { group = "com.facebook.shimmer", name = "shimmer", version.ref = "shimmer" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+#hilt-android-gradle-plugin = { id = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hiltRunCopiler" }
+google-dagger-hilt={ id = "com.google.dagger.hilt.android", version = "2.51.1" }
 

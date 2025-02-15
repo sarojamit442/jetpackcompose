@@ -2,10 +2,11 @@ package com.example.jetpackcustomer.ui.theme
 
 class Quetion {
     /**
-    What is Jetpack Compose, and how does it differ from the traditional Android UI toolkit (XML-based)?
+    Q1 :   What is Jetpack Compose, and how does it differ from the traditional Android UI toolkit (XML-based)?
+    This tests your understanding of Composes declarative approach compared to the traditional
+    imperative approach using XML and Views.
 
-    This tests your understanding of Compose's declarative approach compared to the traditional imperative approach using XML and Views.
-    What are Composables in Jetpack Compose?
+    Q2:  What are Composable in Jetpack Compose?
 
     A Composable is a fundamental building block in Jetpack Compose, which is used to define UI components. You should explain how a Composable function is created and used, and the role of @Composable annotation.
     What is setContent in Jetpack Compose, and when is it used?
@@ -2383,5 +2384,10 @@ class Quetion {
     Explain your thought process clearly: Don’t just focus on providing a solution—explain why you chose that approach and discuss trade-offs when necessary.
 
 
+    Q what is derrence between implementation, testimplementation, androidTestimplementation, debugimplementation in gradle file and
+    how to add plugin , and what is defference between dependecy and plugin and why use are both ,
+
+
+     Q: why make sealed calss and open class in kotlin
      */
 }
