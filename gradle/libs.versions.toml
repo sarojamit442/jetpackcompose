@@ -22,6 +22,8 @@ messaging = "24.1.0"
 gms = "4.4.2"
 pinview = "1.4.4"
 shimmer = "0.5.0"
+navigation-compose = "2.5.0"
+navigationRuntimeAndroid = "2.9.0-alpha06"
 
 
 [libraries]
@@ -44,6 +46,7 @@ hilt-lifecycle-viewmodel = { group = "androidx.hilt", name = "hilt-lifecycle-vie
 hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltViewModel" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltRunCopiler" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hiltRunCopiler" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation-compose" }
 
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
@@ -55,6 +58,7 @@ sdp-android = { group = "com.intuit.sdp", name = "sdp-android", version.ref = "s
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "messaging" }
 pinview = { group = "io.github.chaosleung", name = "pinview", version.ref = "pinview" }
 shimmer = { group = "com.facebook.shimmer", name = "shimmer", version.ref = "shimmer" }
+androidx-navigation-runtime-android = { group = "androidx.navigation", name = "navigation-runtime-android", version.ref = "navigationRuntimeAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

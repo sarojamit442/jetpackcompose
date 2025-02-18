@@ -32,7 +32,7 @@ class LoginViewModel @Inject constructor() :ViewModel(){
                 is Resource.Success -> {
                     val message = result.data
                     if (result.data.errorCode == 200) {
-                        _countryDataList.value = result.data.data
+                     //   _countryDataList.value = result!!.data.data
                     } else {
                     }
 

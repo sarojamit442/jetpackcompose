@@ -5,7 +5,7 @@ import com.example.jetpackcustomer.utils.CommonResponse
 import com.example.jetpackcustomer.utils.Resource
 import javax.inject.Inject
 
-class AuthRepository:BaseRepository() {
+class AuthRepository @Inject constructor():BaseRepository() {
     @Inject
       lateinit var apiService:ApiService
     suspend fun callGetUserType(param: HashMap<String, Any>): Resource<CommonResponse> {
