@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
@@ -23,6 +24,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackCustomer"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.theme.customer.auth.ForgetPasswordActivity"
+            android:exported="false"
+            android:label="@string/title_activity_forget_password"
+            android:theme="@style/Theme.JetpackCustomer" />
+        <activity
+            android:name=".ui.theme.customer.auth.RestActivity"
+            android:exported="false"
+            android:label="@string/title_activity_rest"
+            android:theme="@style/Theme.JetpackCustomer" />
+        <activity
+            android:name=".OtpActivity"
+            android:exported="false"
+            android:label="@string/title_activity_otp"
+            android:theme="@style/Theme.JetpackCustomer" />
+        <activity
+            android:name=".ui.theme.demo.ui.theme.RecompositionstateConcept"
+            android:exported="false"
+            android:label="@string/title_activity_recompositionstate_concept"
+            android:theme="@style/Theme.JetpackCustomer" />
+        <activity
+            android:name=".ui.theme.customer.auth.ui.theme.SignUpActivity"
+            android:exported="false"
+            android:label="@string/title_activity_sign_up"
+            android:theme="@style/Theme.JetpackCustomer" />
         <activity
             android:name=".ui.theme.demo.CommomVIew"
             android:exported="false"

@@ -4,4 +4,9 @@
     <string name="title_activity_sign_upactivity">SignUPActivity</string>
     <string name="title_activity_otp_actvitiy">OtpActvitiy</string>
     <string name="title_activity_commom_view">CommomVIew</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_recompositionstate_concept">RecompositionstateConcept</string>
+    <string name="title_activity_otp">OtpActivity</string>
+    <string name="title_activity_rest">RestActivity</string>
+    <string name="title_activity_forget_password">ForgetPasswordActivity</string>
 </resources>

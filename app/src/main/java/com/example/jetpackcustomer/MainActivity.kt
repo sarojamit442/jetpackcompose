@@ -24,6 +24,7 @@ import androidx.core.content.ContextCompat.startActivity
 import com.example.jetpackcustomer.ui.theme.JetpackCustomerTheme
 import com.example.jetpackcustomer.ui.theme.customer.auth.LoginPage
 import com.example.jetpackcustomer.ui.theme.demo.AontherActicty
+import com.example.jetpackcustomer.ui.theme.demo.ui.theme.RecompositionstateConcept
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,41 +35,44 @@ class MainActivity : ComponentActivity() {
     }
 
 
-  @Composable
-  fun Main(){
-      Row() {
-          Column(verticalArrangement = Arrangement.Center, modifier = Modifier.padding(16.dp)) {
+    @Composable
+    fun Main() {
+        Row() {
+            Column(verticalArrangement = Arrangement.Center, modifier = Modifier.padding(16.dp)) {
 
-              Button(
-                  onClick = { navigateToSecondActivity() },
-                  modifier = Modifier.padding(top = 16.dp)
+                Button(
+                    onClick = { navigateToSecondActivity() },
+                    modifier = Modifier.padding(top = 16.dp)
 
-                  
-              ) {
-                  Text("Demo Project")
-              }
-              Button(
-                  onClick = { navigateToLogin() },
-                  modifier = Modifier.padding(top = 16.dp)
-              ) {
-                  Text("Project")
-              }
-              Text(text = "dsfg", modifier = Modifier.clickable { navigateToLogin() })
-          }
-      }
 
-  }
+                ) {
+                    Text("Demo Project")
+                }
+                Button(
+                    onClick = { navigateToLogin() },
+                    modifier = Modifier.padding(top = 16.dp)
+                ) {
+                    Text("Project")
+                }
+                Text(text = "dsfg", modifier = Modifier.clickable { navigateToLogin() })
+            }
+        }
+
+    }
+
     @Preview(showBackground = true, showSystemUi = true)
     @Composable
     fun RowANDFEatures() {
-      Main()
+        Main()
+
     }
 
     private fun navigateToSecondActivity() {
-        val intent = Intent(this, AontherActicty::class.java)
+        val intent = Intent(this, RecompositionstateConcept::class.java)
         startActivity(intent)
 
     }
+
     private fun navigateToLogin() {
         val intent = Intent(this, LoginPage::class.java)
         startActivity(intent)

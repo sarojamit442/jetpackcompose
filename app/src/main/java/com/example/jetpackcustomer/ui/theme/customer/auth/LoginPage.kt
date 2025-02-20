@@ -2,7 +2,10 @@
 
 package com.example.jetpackcustomer.ui.theme.customer.auth
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -12,11 +15,13 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -30,13 +35,19 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.jetpackcustomer.R
+import com.example.jetpackcustomer.utils.NavigationHelper
 
 class LoginPage : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -242,6 +253,8 @@ class LoginPage : ComponentActivity() {
     @Preview(showSystemUi = true)
     @Composable
     fun MyApp() {
+        val context: Activity = LocalContext.current as Activity
+
         val (username, setUsername) = remember { mutableStateOf("") }
         val (password, setPassword) = remember { mutableStateOf("") }
 
@@ -267,11 +280,11 @@ class LoginPage : ComponentActivity() {
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.background_image_header),
-                        contentDescription = ""
+                        contentDescription = "", modifier = Modifier
+                            .fillMaxWidth()
                     )
                     Column(
-                        modifier = Modifier.fillMaxSize(),
-                        verticalArrangement = Arrangement.Center
+                        modifier = Modifier.padding(top = 330.dp),
                     ) {
 
                         Column(
@@ -298,8 +311,8 @@ class LoginPage : ComponentActivity() {
                             ) {
                                 TextField(
                                     value = username, onValueChange = setUsername,
-                                   // label = { Text(text = "Enter the UserName")},
-                                    placeholder = { Text(text = "Enter the UserName")},
+                                    // label = { Text(text = "Enter the UserName")},
+                                    placeholder = { Text(text = "Enter the UserName") },
                                     colors = TextFieldDefaults.textFieldColors(
                                         Color.Black,
                                         focusedIndicatorColor = Color.Transparent, // Remove shadow/underline when focused
@@ -334,7 +347,7 @@ class LoginPage : ComponentActivity() {
                                 TextField(
                                     modifier = Modifier.background(Color.White),
                                     value = username, onValueChange = setUsername,
-                                    label = { Text(text = "Enter the password")},
+                                    label = { Text(text = "Enter the password") },
                                     colors = TextFieldDefaults.textFieldColors(
                                         Color.Black,
                                         focusedIndicatorColor = Color.Transparent, // Remove shadow/underline when focused
@@ -351,11 +364,96 @@ class LoginPage : ComponentActivity() {
                                         .clickable { /* Handle image click action */ }
                                 )
                             }
+                            Spacer(modifier = Modifier.height(20.dp))
+                            Text(
+                                text = "Forget Password",
+                                style = TextStyle(
+                                    fontSize = 15.sp,
+                                    color = Color(0xFF2196F3)
+
+                                ), modifier = Modifier.padding(start = 15.dp).clickable {
+                                    if (true) {
+                                        // If the context is indeed an Activity, navigate using it
+                                        NavigationHelper.navigateTo(
+                                            ForgetPasswordActivity::class.java,
+                                            shouldFinish = true,
+                                            activity = context
+                                        )
+                                    } else {
+                                        // Handle the case where the context is not an Activity
+                                        Log.e("NavigationError", "Context is not an Activity")
+                                    }
+
+                                }
+
+                            )
+                            Spacer(modifier = Modifier.height(10.dp))
+                            Row() {
+                                Image(
+                                    painter = painterResource(id = R.drawable.checkbox_unfilled),
+                                    contentDescription = "",
+                                    modifier = Modifier.padding(start = 18.dp)
+                                )
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Text(text = "Remember Me")
+                            }
+                            Spacer(modifier = Modifier.padding(top = 20.dp))
+                            Box (contentAlignment = Alignment.Center, modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(10.dp)
+                                .height(40.dp)
+                                .clickable {
+                                    if (context is Activity) {
+                                        // If the context is indeed an Activity, navigate using it
+                                        NavigationHelper.navigateTo(
+                                            SignUPActivity::class.java,
+                                            shouldFinish = true,
+                                            activity = context
+                                        )
+                                    } else {
+                                        // Handle the case where the context is not an Activity
+                                        Log.e("NavigationError", "Context is not an Activity")
+                                    }
+
+                                }
+                                .clip(
+                                    RoundedCornerShape(
+                                        topStart = 10.dp,
+                                        topEnd = 10.dp,
+                                        bottomEnd = 10.dp,
+                                        bottomStart = 10.dp
+                                    )
+                                )
+                                .background(Color.Blue)
+                                .border(width = 1.dp, color = Color.Blue, shape = RectangleShape)){
+                                Text(text = "Login", style = TextStyle(
+                                    color = Color.White
+                                )
+                                )
+                            }
+                            Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center){
+                                Row(){
+                                    Text(text = "Dont have an account")
+                                    Spacer(modifier =Modifier.padding(start = 10.dp))
+                                    Text(text = "SignUp",style = TextStyle(
+                                        color = Color(0xFF2196F3)
+                                    ))
+                                }
+                            }
+                            Spacer(modifier = Modifier.padding(top = 10.dp))
+                            Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center){
+                                Text(text = "or continue as Guest", style = TextStyle(
+                                    color = Color(0xFF2196F3)
+                                )
+                                )
+                                }
+                            }
+
 
                         }
 
                     }
-                }
+
 
             },
 //        bottomBar = {
